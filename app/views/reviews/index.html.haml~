@@ -1,0 +1,13 @@
+%h1 My reviews for movie #{@movie.title}
+
+%table#reviews
+  %thead
+    %tr
+      %th Potatoes
+      %th id 
+  %tbody
+    - @reviews.each do |review|
+      %tr
+        %td= review.potatoes
+        %td= link_to 'Delete', movie_path(@movie), :method => :delete
+

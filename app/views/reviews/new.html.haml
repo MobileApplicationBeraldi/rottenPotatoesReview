@@ -1,0 +1,12 @@
+%h2 Add a comment for #{@movie.title}
+
+= form_tag movie_reviews_path, :method => :post do
+
+  = label :review, :potatoes, 'Votes'
+  = select :review, :potatoes, [1,2,3,4,5]
+
+  = label :review, :comment, 'Comment'
+  = text_field :review, :comment
+
+  <br/><br/>
+  = submit_tag 'Add review'
